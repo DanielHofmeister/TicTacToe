@@ -65,7 +65,12 @@ class Main {
             }
             numMoves++;
             if (checkWin()) {
-                System.out.println("Player " + playerNum + " wins!");
+                if (playerNum == 1) {
+                    System.out.println("Player " + playerNum + " wins!");
+                } else {
+                    printOutline();   
+                    System.out.println("Computer Wins!");
+                }
                 gameOver = true;
             } else if (numMoves == 9) {
                 System.out.println("Tie Game");
